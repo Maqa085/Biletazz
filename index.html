@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiletAz.com - Onlayn Bilet Satışı</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h1><i class="fas fa-ticket-alt"></i> BiletAz.com</h1>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#events" class="nav-link">Konsertlər</a>
+                    <a href="#events" class="nav-link">Teatr</a>
+                    <a href="#events" class="nav-link">Kino</a>
+                    <a href="#events" class="nav-link">İdman</a>
+                    <a href="#events" class="nav-link">Festival</a>
+                </nav>
+                <div class="auth-section">
+                    <div class="user-greeting">Salam, Xoş gəlmisiniz!</div>
+                    <div class="cart-section">
+                        <button class="cart-btn" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </button>
+                    </div>
+                    <div class="user-menu">
+                        <button class="login-btn" id="loginBtn">
+                            <i class="fas fa-user"></i>
+                            Daxil ol
+                        </button>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Hesaba daxil ol
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-user-plus"></i>
+                                Qeydiyyatdan keç
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-ticket-alt"></i>
+                                Biletlərim
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-heart"></i>
+                                Sevimlilər
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Biletləri asanlıqla tap, seç və al</h1>
+                <p>Konsert, teatr, kino və idman tədbirlərinin ən yaxşı təkliflərini bir yerdə kəşf edin.</p>
+                <p class="hero-welcome">Sənin adınla bu saytda daha fərdi bir təcrübə yaşamağa hazırsan.</p>
+
+                <div class="popular-searches">
+                    <span>Populyar axtarışlar:</span>
+                    <a href="#events">Konsert</a>
+                    <a href="#events">Teatr</a>
+                    <a href="#events">Festival</a>
+                    <a href="#events">İdman</a>
+                    <a href="#events">Uzi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1,200+</div>
+                    <div class="stat-label">Tədbir</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">250,000+</div>
+                    <div class="stat-label">Bilet satışı</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Müştəri məmnunluğu</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7/24</div>
+                    <div class="stat-label">Dəstək xidməti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Categories -->
+    <section class="categories" id="events">
+        <div class="container">
+            <h2>Konsert Kateqoriyaları</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="pop">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Pop Musiqisi</h3>
+                    <span>25+ konsert</span>
+                </div>
+                <div class="category-card" data-category="folk">
+                    <i class="fas fa-guitar"></i>
+                    <h3>Xalq Musiqisi</h3>
+                    <span>18+ konsert</span>
+                </div>
+                <div class="category-card" data-category="jazz">
+                    <i class="fas fa-saxophone"></i>
+                    <h3>Caz Musiqisi</h3>
+                    <span>12+ konsert</span>
+                </div>
+                <div class="category-card" data-category="classical">
+                    <i class="fas fa-music"></i>
+                    <h3>Klassik Musiqi</h3>
+                    <span>15+ konsert</span>
+                </div>
+                <div class="category-card" data-category="rock">
+                    <i class="fas fa-drum"></i>
+                    <h3>Rok Musiqisi</h3>
+                    <span>10+ konsert</span>
+                </div>
+                <div class="category-card" data-category="international">
+                    <i class="fas fa-globe"></i>
+                    <h3>Xarici Artistlər</h3>
+                    <span>8+ konsert</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="featured-events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Yaxın Konsertlər</h2>
+                <a href="#" class="view-all">Hamısına bax <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/7IsrTJcj8bZwpETgn8zpG6yTz0KSwOHcvy2gqosl.jpg" alt="Disco party">
+                        <div class="event-badge">Elektron</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Elektron Musiqi</div>
+                        <h3>Disco party</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Hayal Kahvesi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 17 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/eEP1MKOnvt2pDETKmPZ9XdYYw5aJcfci.png" alt="Forumu konsert">
+                        <div class="event-badge">Klassik</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Klasik Musiqi</div>
+                        <h3>13-cü Ümumdünya Şəhərsalma Forumu konserti</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Azərbaycan Dövlət Akademik Filarmoniyası</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 18 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">4 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/n6eIQ8zZDP3wX9mrHQZBqD2vfIUQgvwM.png" alt="Kamera Musiqisi Axşamı">
+                        <div class="event-badge">Məhdud</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Kamera Musiqisi</div>
+                        <h3>Yeni adlar layihəsi: Kamera Musiqisi Axşamı</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Kamera və orqan musiqisi zalı</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 18 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">3 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/ZY9eUNqAcPZTG0cdx71vrCwWV1mW3ZNe.png" alt="Kino Musiqisi">
+                        <div class="event-badge">Film</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Film Musiqisi</div>
+                        <h3>Böyük Şəhərlərin Kino Musiqisi</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Rəşid Behbudov adına Azərbaycan Dövlət Mahnı Teatrı</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 18 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/VTr4tiawDVbLHY8iLgHXQf3Hy3WJS161Aw7iaJ0f.jpg" alt="Old City Jazz nights">
+                        <div class="event-badge">Caz</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Caz Konsert</div>
+                        <h3>“Old City JAZZ nights” at “Best Place“</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Best Place Baku</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 18 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">8 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/fOhjX1tzgEd9HMtfuZRSBPNmflmtbLxa.png" alt="Muğam Axşamı">
+                        <div class="event-badge">Muğam</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Muğam</div>
+                        <h3>Muğamat axşamı (WUF13)</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Beynəlxalq Muğam Mərkəzi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 19 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/GWFmRNW1IkgiQFJki3E9vxD2LCu39vRcuh7rXjkH.jpg" alt="Leyli və Məcnun">
+                        <div class="event-badge">Opera</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Opera & Drama</div>
+                        <h3>Leyli və Məcnun</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Heydər Əliyev Sarayı</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 19 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">15 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/hPEKvg6Pc41p3dZhHs5ENwEaaJtCPoAf.png" alt="Türk Rok Gecəsi">
+                        <div class="event-badge">Rok</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Rok Konsert</div>
+                        <h3>Türk Rok Gecəsi</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Hayal Kahvesi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 19 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/8WfT7sRnhQXtG9cXtrd70g37gbVhSZEm24z3F8kv.jpg" alt="Retro Gecəsi">
+                        <div class="event-badge">Retro</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Retro Gece</div>
+                        <h3>“Bakı işıqları” retro gecəsi</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Kamera və orqan musiqisi zalı</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 20 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/5fvAjExaCQYvaBVqh8zKxB3uI6UTW2nr0nWJuHat.jpg" alt="Sumqayıt Konserti">
+                        <div class="event-badge">Festival</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Xalq Musiqisi</div>
+                        <h3>Bu Şəhərdə "Gül Əndam" - Sumqayıt</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Sumqayıt şəhəri Kimyaçı Mədəniyyət Sarayı</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 20 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/D4PcDZ34HWlHowt0iacyV5xGPySJJCOpljrTvOYp.jpg" alt="Festival">
+                        <div class="event-badge">Festival</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Festival</div>
+                        <h3>Gənclik Festivalı</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Hayal Kahvesi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 20 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">12 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/0rkDM9fqqRcjd5v5YKjSBjwoZBLJS10Z.png" alt="Pop star gecəsi">
+                        <div class="event-badge">Pop</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Pop Musiqi</div>
+                        <h3>Pop star gecəsi</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Hayal Kahvesi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 21 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/5GaSXQbF74vGUF5aHIpdPe3j0kiKIh45ZTiEvofP.jpg" alt="Aynaband konserti">
+                        <div class="event-badge">Canlı</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Canlı Konsert</div>
+                        <h3>“Aynaband” Qrupunun Canlı Konserti – Sumqayıtda!</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Sumqayıt Bələdiyyəsinin Muğam və Yaradıcılıq Mərkəzi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 22 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/4H6nU9Y1x6yGgwV36RMeq3voOeK86BhHeSNHysXs.jpg" alt="Vaqif Mustafazadə">
+                        <div class="event-badge">Xüsusi</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Xüsusi Proqram</div>
+                        <h3>Vaqif Mustafazadənin yaradıcılığına həsr olunmuş konsert</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Kapellhaus</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 22 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">30 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/7DumN6ZXvHMebOpgKx3RaqewbcQAII4boh6gtxW2.jpg" alt="Horror Night Party">
+                        <div class="event-badge">Party</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Horror Party</div>
+                        <h3>Horror Night Party</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Park Cinema Flame Towers</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 22 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">28 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/BtZ5ntCj5r8ZCEfhwTiqs2Q2C1zae0SmS7f2rPDi.jpg" alt="Jubiley konserti">
+                        <div class="event-badge">Yubiley</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Yubiley Konserti</div>
+                        <h3>Cavid Kurbanov. Yubiley konserti - 50 il</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Nizami Kino Mərkəzi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 23 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">15 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/NywPuLWiwEjeBRlr7IFvkT1rQk1ZlJpceJTMoAna.jpg" alt="Notlar Arasında Söhbət">
+                        <div class="event-badge">Akustik</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Akustik</div>
+                        <h3>Notlar Arasında Söhbət</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Show Gallery</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 20 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/JlJbrppIJb3jZsK82CeenHKqBeJzeKre.png" alt="Ordan - Burdan">
+                        <div class="event-badge">Klassik</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Kino & Əyləncə</div>
+                        <h3>“Ordan - Burdan”</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Rəşid Behbudov adına Azərbaycan Dövlət Mahnı Teatrı</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 21 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/6EBCrVW7lgKwxVxWmRmhP5AuNg7P5pey.png" alt="Səid Rüstəmov Orkestri">
+                        <div class="event-badge">Orkestr</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Orkestr</div>
+                        <h3>Səid Rüstəmov adına Xalq Çalğı Alətləri Orkestri konserti</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Beynəlxalq Muğam Mərkəzi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 21 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">10 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://cdn.iticket.az/event/poster_bg/eR47tHf5x2D0yecFheCu8fB8Gmn95Rsr.png" alt="90 İllik İrs">
+                        <div class="event-badge">Ənənə</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Klasik</div>
+                        <h3>90 İllik İrs</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Azərbaycan Dövlət Akademik Filarmoniyası</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 22 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">4 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1541185937-9b26f96d6c40?w=300&h=200&fit=crop&crop=center" alt="Uzi live concert">
+                        <div class="event-badge">Hip-Hop</div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-category">Rap / Hip-Hop</div>
+                        <h3>Uzi Live</h3>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Hayal Kahvesi</p>
+                        <p class="date"><i class="fas fa-calendar"></i> 24 May 2026</p>
+                        <div class="price-section">
+                            <span class="price">20 AZN-dən</span>
+                            <div class="action-buttons">
+                                <button class="buy-btn">Bilet Al</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Niyə BiletAz.com?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Təhlükəsiz Ödəniş</h3>
+                    <p>SSL şifrələmə ilə təhlükəsiz onlayn ödəniş</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobil Bilet</h3>
+                    <p>Telefonunuzda saxlayın, çap etməyə ehtiyac yoxdur</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Xidmət</h3>
+                    <p>İstənilən vaxt bilet ala bilərsiniz</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-undo"></i>
+                    <h3>Asan Qaytarma</h3>
+                    <p>Şərtlərə uyğun olaraq biletləri qaytara bilərsiniz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BiletAz.com</h3>
+                    <p>Azərbaycanda ən böyük onlayn bilet satış platforması</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Tədbirlər</h4>
+                    <ul>
+                        <li><a href="#">Kino Biletləri</a></li>
+                        <li><a href="#">Teatr Biletləri</a></li>
+                        <li><a href="#">Konsert Biletləri</a></li>
+                        <li><a href="#">İdman Biletləri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Müştəri Xidməti</h4>
+                    <ul>
+                        <li><a href="#">Kömək Mərkəzi</a></li>
+                        <li><a href="#">Bilet Qaytarma</a></li>
+                        <li><a href="#">Ödəniş Üsulları</a></li>
+                        <li><a href="#">Tez-tez Verilən Suallar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Əlaqə</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +994 12 444 44 44</li>
+                        <li><i class="fas fa-envelope"></i> info@biletaz.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bakı, Azərbaycan</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Xidmət</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BiletAz.com. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Concert Detail Modal -->
+    <div id="concertDetailModal" class="modal">
+        <div class="modal-content concert-detail-modal">
+            <span class="close" id="concertDetailClose">&times;</span>
+            <div class="concert-detail-header">
+                <div class="concert-image-large">
+                    <img id="detailConcertImage" src="" alt="">
+                    <div class="concert-overlay">
+                        <div class="concert-badge-large" id="detailConcertBadge">Populyar</div>
+                    </div>
+                </div>
+                <div class="concert-main-info">
+                    <div class="concert-category" id="detailConcertCategory">Pop Konsert</div>
+                    <h2 id="detailConcertTitle">Konsert Adı</h2>
+                    <div class="concert-basic-info">
+                        <p class="venue-info"><i class="fas fa-map-marker-alt"></i> <span id="detailConcertVenue">Məkan</span></p>
+                        <p class="date-info"><i class="fas fa-calendar"></i> <span id="detailConcertDate">Tarix</span></p>
+                        <p class="price-info"><i class="fas fa-tag"></i> <span id="detailConcertPrice">Qiymət</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concert-detail-body">
+                <div class="concert-description">
+                    <h3><i class="fas fa-info-circle"></i> Konsert Haqqında</h3>
+                    <p id="concertDescription">Bu konsert haqqında ətraflı məlumat...</p>
+                </div>
+                
+                <div class="concert-features">
+                    <h3><i class="fas fa-star"></i> Xüsusiyyətlər</h3>
+                    <div class="features-list" id="concertFeatures">
+                        <div class="feature-item">
+                            <i class="fas fa-microphone"></i>
+                            <span>Canlı ifə</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-camera"></i>
+                            <span>Foto çəkiliş icazəsi</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-parking"></i>
+                            <span>Pulsuz parkinq</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="venue-details">
+                    <h3><i class="fas fa-building"></i> Məkan Məlumatları</h3>
+                    <div class="venue-info-grid">
+                        <div class="venue-item">
+                            <strong>Ünvan:</strong>
+                            <span id="venueAddress">Məkan ünvanı</span>
+                        </div>
+                        <div class="venue-item">
+                            <strong>Tutum:</strong>
+                            <span id="venueCapacity">5000 nəfər</span>
+                        </div>
+                        <div class="venue-item">
+                            <strong>Akustika:</strong>
+                            <span>Professional səs sistemi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket-info">
+                    <h3><i class="fas fa-ticket-alt"></i> Bilet Məlumatları</h3>
+                    <div class="ticket-types-info">
+                        <div class="ticket-type-info">
+                            <span class="ticket-name">VIP</span>
+                            <span class="ticket-desc">Ön sıra, VIP giriş</span>
+                            <span class="ticket-price-info">80-120 AZN</span>
+                        </div>
+                        <div class="ticket-type-info">
+                            <span class="ticket-name">Premium</span>
+                            <span class="ticket-desc">Yaxşı görüş, rahat oturacaq</span>
+                            <span class="ticket-price-info">50-80 AZN</span>
+                        </div>
+                        <div class="ticket-type-info">
+                            <span class="ticket-name">Standart</span>
+                            <span class="ticket-desc">Ümumi giriş</span>
+                            <span class="ticket-price-info">25-50 AZN</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concert-actions">
+                    <button class="btn-large add-to-cart-detail">
+                        <i class="fas fa-cart-plus"></i>
+                        Səbətə Əlavə Et
+                    </button>
+                    <button class="btn-large buy-now-detail">
+                        <i class="fas fa-ticket-alt"></i>
+                        İndi Bilet Al
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="cartClose">&times;</span>
+            <div class="modal-header">
+                <h2><i class="fas fa-shopping-cart"></i> Səbətim</h2>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems" class="cart-items">
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Səbətiniz boşdur</p>
+                    </div>
+                </div>
+                <div class="cart-total" id="cartTotal" style="display: none;">
+                    <div class="total-row">
+                        <span>Ümumi məbləğ:</span>
+                        <span id="totalAmount">0 AZN</span>
+                    </div>
+                    <button class="btn btn-primary btn-large" id="checkoutBtn">Ödənişə Keç</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Payment Modal -->
+    <div id="paymentModal" class="modal payment-modal">
+        <div class="payment-container">
+            <div class="payment-header">
+                <h2><i class="fas fa-credit-card"></i> Təhlükəsiz Ödəniş</h2>
+                <span class="close" id="paymentClose">&times;</span>
+            </div>
+            
+            <div class="payment-body">
+                <div class="payment-info">
+                    <div class="merchant-info">
+                        <img src="https://via.placeholder.com/60x40/e74c3c/ffffff?text=BiletAz" alt="BiletAz">
+                        <div>
+                            <h4>BiletAz.com</h4>
+                            <p>Təhlükəsiz ödəniş sistemi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="amount-display">
+                        <span>Ödəniləcək məbləğ:</span>
+                        <strong id="paymentAmount">0 AZN</strong>
+                    </div>
+                </div>
+
+                <form class="payment-form" id="paymentForm">
+                    <div class="card-container">
+                        <div class="card-front" id="cardFront">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-chip">
+                                    <div class="chip"></div>
+                                </div>
+                                <div class="card-number" id="displayCardNumber">•••• •••• •••• ••••</div>
+                                <div class="card-info">
+                                    <div class="card-holder">
+                                        <span class="label">Kart sahibi</span>
+                                        <div id="displayCardHolder">AD SOYAD</div>
+                                    </div>
+                                    <div class="card-expiry">
+                                        <span class="label">Son tarix</span>
+                                        <div id="displayExpiry">MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back" id="cardBack">
+                            <div class="card-bg"></div>
+                            <div class="magnetic-strip"></div>
+                            <div class="cvv-strip">
+                                <span>CVV</span>
+                                <div id="displayCVV">•••</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardNumber">Kart nömrəsi</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                        <div class="card-types">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cardHolder">Kart sahibinin adı</label>
+                            <input type="text" id="cardHolder" placeholder="AD SOYAD">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Son tarix</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+
+                    <div class="security-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Məlumatlarınız SSL şifrələmə ilə qorunur</span>
+                    </div>
+
+                    <button type="submit" class="pay-btn">
+                        <i class="fas fa-lock"></i>
+                        Ödənişi Tamamla
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ticket Modal -->
+    <div id="ticketModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Bilet Seçimi</h2>
+            </div>
+            <div class="modal-body">
+                <div class="event-details">
+                    <h3 id="modalEventTitle">Tədbir Adı</h3>
+                    <p id="modalEventDate">Tarix və Vaxt</p>
+                    <p id="modalEventVenue">Məkan</p>
+                </div>
+                <div class="ticket-selection">
+                    <h4>Bilet Növü Seçin:</h4>
+                    <div class="ticket-types">
+                        <div class="ticket-type">
+                            <input type="radio" id="vip" name="ticketType" value="vip">
+                            <label for="vip">
+                                <span class="ticket-name">VIP</span>
+                                <span class="ticket-price">50 AZN</span>
+                            </label>
+                        </div>
+                        <div class="ticket-type">
+                            <input type="radio" id="premium" name="ticketType" value="premium" checked>
+                            <label for="premium">
+                                <span class="ticket-name">Premium</span>
+                                <span class="ticket-price">30 AZN</span>
+                            </label>
+                        </div>
+                        <div class="ticket-type">
+                            <input type="radio" id="standard" name="ticketType" value="standard">
+                            <label for="standard">
+                                <span class="ticket-name">Standart</span>
+                                <span class="ticket-price">15 AZN</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity-selection">
+                    <label for="quantity">Bilet Sayı:</label>
+                    <select id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="total-price">
+                    <h3>Ümumi: <span id="totalPrice">30 AZN</span></h3>
+                </div>
+                <button class="btn btn-primary btn-large" id="proceedToPay">Ödənişə Keç</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

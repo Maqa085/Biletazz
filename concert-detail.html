@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsert Detayları - BiletAz.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h1><i class="fas fa-ticket-alt"></i> BiletAz.com</h1>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">Ana Səhifə</a>
+                    <a href="#" class="nav-link">Röya Konserti</a>
+                    <a href="#" class="nav-link">Emin Ağalarov</a>
+                    <a href="#" class="nav-link">Brilliant Dadaşova</a>
+                </nav>
+                <div class="auth-section">
+                    <div class="cart-section">
+                        <button class="cart-btn" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </button>
+                    </div>
+                    <div class="user-menu">
+                        <button class="login-btn" id="loginBtn">
+                            <i class="fas fa-user"></i>
+                            Daxil ol
+                        </button>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Hesaba daxil ol
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-user-plus"></i>
+                                Qeydiyyatdan keç
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Concert Detail Section -->
+    <section class="concert-detail-page">
+        <div class="container">
+            <div class="concert-detail-content">
+                <div class="concert-detail-header">
+                    <div class="concert-image-large">
+                        <img id="concertImage" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop&crop=center" alt="Konsert">
+                        <div class="concert-overlay">
+                            <div class="concert-badge-large" id="concertBadge">Populyar</div>
+                        </div>
+                    </div>
+                    <div class="concert-main-info">
+                        <div class="concert-category" id="concertCategory">Pop Konsert</div>
+                        <h1 id="concertTitle">Röya - Yeni İl Konserti 2025</h1>
+                        <div class="concert-basic-info">
+                            <p class="venue-info"><i class="fas fa-map-marker-alt"></i> <span id="concertVenue">Heydər Əliyev Sarayı</span></p>
+                            <p class="date-info"><i class="fas fa-calendar"></i> <span id="concertDate">31 Dekabr 2024, 20:00</span></p>
+                            <p class="price-info"><i class="fas fa-tag"></i> <span id="concertPrice">25 AZN-dən</span></p>
+                        </div>
+                        <div class="concert-actions-header">
+                            <button class="btn-large add-to-cart-detail">
+                                <i class="fas fa-cart-plus"></i>
+                                Səbətə Əlavə Et
+                            </button>
+                            <button class="btn-large buy-now-detail">
+                                <i class="fas fa-ticket-alt"></i>
+                                İndi Bilet Al
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concert-detail-body">
+                    <div class="concert-description">
+                        <h3><i class="fas fa-info-circle"></i> Konsert Haqqında</h3>
+                        <p id="concertDescription">Azərbaycanın ən məşhur müğənnisi Röya ilə yeni il gecəsi! Bu gecə sizə unudulmaz anlar yaşadacaq. Röyanın ən məşhur mahnıları və yeni il sürprizləri ilə dolu konsert.</p>
+                    </div>
+                    
+                    <div class="concert-features">
+                        <h3><i class="fas fa-star"></i> Xüsusiyyətlər</h3>
+                        <div class="features-list" id="concertFeatures">
+                            <div class="feature-item">
+                                <i class="fas fa-microphone"></i>
+                                <span>Canlı ifə</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-camera"></i>
+                                <span>Foto çəkiliş icazəsi</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-parking"></i>
+                                <span>Pulsuz parkinq</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Yeni il hədiyyələri</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="venue-details">
+                        <h3><i class="fas fa-building"></i> Məkan Məlumatları</h3>
+                        <div class="venue-info-grid">
+                            <div class="venue-item">
+                                <strong>Ünvan:</strong>
+                                <span id="venueAddress">Heydər Əliyev pr., Bakı</span>
+                            </div>
+                            <div class="venue-item">
+                                <strong>Tutum:</strong>
+                                <span id="venueCapacity">3000 nəfər</span>
+                            </div>
+                            <div class="venue-item">
+                                <strong>Akustika:</strong>
+                                <span>Professional səs sistemi</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ticket-info">
+                        <h3><i class="fas fa-ticket-alt"></i> Bilet Məlumatları</h3>
+                        <div class="ticket-types-info">
+                            <div class="ticket-type-info">
+                                <span class="ticket-name">VIP</span>
+                                <span class="ticket-desc">Ön sıra, VIP giriş</span>
+                                <span class="ticket-price-info">80-120 AZN</span>
+                            </div>
+                            <div class="ticket-type-info">
+                                <span class="ticket-name">Premium</span>
+                                <span class="ticket-desc">Yaxşı görüş, rahat oturacaq</span>
+                                <span class="ticket-price-info">50-80 AZN</span>
+                            </div>
+                            <div class="ticket-type-info">
+                                <span class="ticket-name">Standart</span>
+                                <span class="ticket-desc">Ümumi giriş</span>
+                                <span class="ticket-price-info">25-50 AZN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BiletAz.com</h3>
+                    <p>Azərbaycanda ən böyük onlayn bilet satış platforması</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BiletAz.com. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="concert-detail.js"></script>
+</body>
+</html>

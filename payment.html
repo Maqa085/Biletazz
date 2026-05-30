@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödəniş - BiletAz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e8edf8;
+            color: #26314d;
+        }
+        .payment-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .payment-card {
+            width: 100%;
+            max-width: 430px;
+            background: #fff;
+            border-radius: 30px;
+            padding: 36px 30px 30px;
+            box-shadow: 0 28px 80px rgba(45, 84, 160, 0.14);
+            border: 1px solid rgba(18, 52, 100, 0.08);
+        }
+        .payment-brand {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .brand-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            color: #0f3460;
+            text-transform: lowercase;
+        }
+        .brand-text::first-letter {
+            color: #0562ff;
+            text-transform: uppercase;
+        }
+        .payment-title {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 28px;
+            color: #17223b;
+        }
+        .input-group {
+            margin-bottom: 18px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #5f6f95;
+            font-weight: 600;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 16px 18px;
+            border-radius: 16px;
+            border: 1px solid #d7dfee;
+            background: #f7f9ff;
+            font-size: 0.98rem;
+            color: #242f4b;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .input-group input:focus {
+            border-color: #3b6fff;
+            box-shadow: 0 0 0 4px rgba(59, 111, 255, 0.1);
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .pay-btn {
+            width: 100%;
+            margin-top: 24px;
+            padding: 16px 0;
+            border: none;
+            border-radius: 18px;
+            background: #0562ff;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pay-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 38px rgba(5, 98, 255, 0.24);
+        }
+        .pay-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .note {
+            margin-top: 18px;
+            color: #7c88a8;
+            font-size: 0.92rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <main class="payment-page">
+        <div class="payment-card">
+            <div class="payment-brand">
+                <span class="brand-text">azericard</span>
+            </div>
+            <div class="payment-title">Kart məlumatlarını daxil edin</div>
+
+            <form id="paymentForm">
+                <div class="input-group">
+                    <label for="cardNumber">Kart nömrəsi</label>
+                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="cc-number">
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label for="expiry">Bitmə tarixi</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp">
+                    </div>
+                    <div class="input-group">
+                        <label for="cvv">CVV/CVC</label>
+                        <input type="text" id="cvv" placeholder="***" maxlength="3" autocomplete="cc-csc">
+                    </div>
+                </div>
+
+                <button type="submit" class="pay-btn" id="payButton" disabled>Ödənişi Təsdiqlə</button>
+                <div class="note">Məlumatlarınız 256-bit SSL şifrələmə ilə qorunur.</div>
+            </form>
+        </div>
+    </main>
+
+    <script src="payment.js"></script>
+</body>
+</html>
